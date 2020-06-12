@@ -8,7 +8,7 @@
 
 
 ## Node Component
-* After Inital Render Each node maintain their own state using `useReducer` hook , so thating adding a node to one does not affect the state change of other node.
+* After Inital Render Each node maintain their own state using `useReducer` hook , so that adding a node to one does not affect the state change of other node.
 
 ## Custom Hook
 
