@@ -53,14 +53,9 @@ export default function ActionBar({
 
     useEffect(() => {
         if(isInputActive){
-            wrapperRef.current.style.width = "200px"
-            wrapperRef.current.style.borderTopRightRadius = "20px" 
-            wrapperRef.current.style.borderBottomRightRadius = "20px" 
-        }
-        if(isInputActive === false) {
-            wrapperRef.current.style.width = "0px"
-            wrapperRef.current.style.borderTopRightRadius = "2px" 
-            wrapperRef.current.style.borderBottomRightRadius = "2px" 
+            wrapperRef.current.className="action-icon-wrapper synthetic-hover"
+        }else {
+            wrapperRef.current.className="action-icon-wrapper"
         }
     },[isInputActive])
 

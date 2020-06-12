@@ -17,6 +17,10 @@
     width: 0px;
 }
 
+.action-icon-wrapper.synthetic-hover{
+    width: 200px !important;
+}
+
 /* .action-icon-wrapper:hover{
     width: 135px;
 } */
