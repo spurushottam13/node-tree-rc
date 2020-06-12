@@ -1,0 +1,16 @@
+.header-wrapper{
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: -1rem;
+    background: #4a50af;
+    margin: -1rem;
+    margin-bottom: 1rem;
+    color: white;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
