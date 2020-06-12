@@ -53,7 +53,7 @@ function Node({ initalData, copyNode, pasteNode, parentNodeRef, index, deleteChi
                 onDragLeave={handleIsTarget}
                 onDragStart={handleOnDragStart}
                 onDragOver={handleOnDragOver}
-                style={isTarget ? { background: 'aquamarine' } : {}}
+                className={isTarget ? "parent-wrapper active" : "parent-wrapper"}
             >
                 <div className="parent">
                     <div className="icon-wrapper" onClick={handleClick}>
