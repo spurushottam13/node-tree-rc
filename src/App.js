@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Node from './component/Node'
 import { useCopyNode } from './hooks/useCopyNode';
+import GithubBadge from './component/GithubBadge';
 const tree = require('./data.json')
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         copyNode={copyNode} 
         pasteNode={pasteNode}
       />
+      <GithubBadge/>
     </div>
   );
 }

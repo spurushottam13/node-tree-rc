@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useReducer, useRef } from 'react'
+import React, { Fragment, useState, useReducer, useRef, useEffect } from 'react'
 import { nodeReducer } from '../../reducer/nodeReducer'
 import { Icon } from '../../icon'
 import './node.css'
@@ -12,6 +12,7 @@ function Node({ initalData, copyNode, pasteNode, parentNodeRef, index, deleteChi
     // Ref 
     const nodeRef = useRef()
     const nodeChildRef = useRef([])
+    const nodeParentRef = useRef()
 
     //Reducer : for complex state management
     const [{ title, children }, updateNodeData] = useReducer(nodeReducer, initalData)
@@ -42,6 +43,10 @@ function Node({ initalData, copyNode, pasteNode, parentNodeRef, index, deleteChi
 
     const handleOnDragOver = (e) => e.preventDefault()
 
+    useEffect(() => {
+        nodeParentRef.current.className = "parent active"
+    },[])
+
     return title ? (
         <Fragment>
             <ul
@@ -55,7 +60,7 @@ function Node({ initalData, copyNode, pasteNode, parentNodeRef, index, deleteChi
                 onDragOver={handleOnDragOver}
                 className={isTarget ? "parent-wrapper active" : "parent-wrapper"}
             >
-                <div className="parent">
+                <div className="parent" ref={nodeParentRef}>
                     <div className="icon-wrapper" onClick={handleClick}>
                         {
                             displayChildren ? <Icon.minus /> : <Icon.plus />
@@ -69,6 +74,7 @@ function Node({ initalData, copyNode, pasteNode, parentNodeRef, index, deleteChi
                         title={title}
                         children={children}
                         parentNodeRef={parentNodeRef}
+                        nodeParentRef={nodeParentRef}
                         index={index}
                     />
                 </div>

@@ -8,8 +8,30 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    transform: scale(0);
+}
+
+.parent.active{
+  transform: scale(1);
+}
+
+.parent:hover{
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+
+
+.parent:hover  .action-icon-wrapper {
+  width: 135px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.parent:focus  .action-icon-wrapper {
+  width: 135px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .parent-wrapper{

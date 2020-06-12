@@ -1,4 +1,4 @@
-import React, { useState, Fragment, useRef } from 'react'
+import React, { useState, Fragment, useRef, useEffect } from 'react'
 import './action.css'
 import { Icon } from '../../icon'
 
@@ -9,12 +9,14 @@ export default function ActionBar({
     copyNode,
     parentNodeRef,
     index,
+    nodeParentRef,
     pasteNode
 }) {
 
-    const [isInputActive, setInputActive] = useState(false)
+    const [isInputActive, setInputActive] = useState(null)
     const [inputValue, setInputValue] = useState(null)
     const inputRef =  useRef()
+    const wrapperRef = useRef()
 
     const handleCopy = (event) => {
         event.stopPropagation()
@@ -49,8 +51,21 @@ export default function ActionBar({
 
     const handleShowInput = () => setInputActive(true)
 
+    useEffect(() => {
+        if(isInputActive){
+            wrapperRef.current.style.width = "200px"
+            wrapperRef.current.style.borderTopRightRadius = "20px" 
+            wrapperRef.current.style.borderBottomRightRadius = "20px" 
+        }
+        if(isInputActive === false) {
+            wrapperRef.current.style.width = "0px"
+            wrapperRef.current.style.borderTopRightRadius = "2px" 
+            wrapperRef.current.style.borderBottomRightRadius = "2px" 
+        }
+    },[isInputActive])
+
     return (
-        <div className="action-icon-wrapper">
+        <div className="action-icon-wrapper" ref={wrapperRef}>
             {
                 isInputActive ? (
                     <Fragment>
@@ -67,8 +82,8 @@ export default function ActionBar({
                 ) : (
                         <Fragment>
                             <Icon.copy className="action-icon" onClick={handleCopy} />
-                            <Icon.cut className="action-icon" onClick={handleCut} />
                             <Icon.paste className="action-icon" onClick={handlePaste} />
+                            <Icon.cut className="action-icon" onClick={handleCut} />
                             <Icon.delete className="action-icon" onClick={handleDelete} />
                             <Icon.add className="action-icon" onClick={handleShowInput} />
                         </Fragment>
