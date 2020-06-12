@@ -1,0 +1,12 @@
+.action-icon{
+    margin: 0px 5px;
+    cursor: pointer;
+}
+
+.action-icon-wrapper{
+    margin: 0;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
