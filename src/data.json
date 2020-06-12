@@ -11,7 +11,7 @@
                     "title":"parent1:parentA:parent-b"
                 },
                 {
-                    "title":"parent1:parentA:parent-a",
+                    "title":"parent1:parentA:parent-c",
                     "children":[
                         {"title":"parent1:parentA:parent-a:number-1"}
                     ]

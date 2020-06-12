@@ -1,0 +1,1 @@
+export const afterReturn = (callback) => setTimeout(callback, 0)
