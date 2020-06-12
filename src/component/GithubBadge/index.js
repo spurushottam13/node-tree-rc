@@ -14,7 +14,7 @@ export default function GithubBadge(){
                     rel="noopener noreferrer" 
                     className="clean-aTag"
                 >
-                    <img src="./github.png" height="17px"/> /spurushottam13</a></p>
+                    <img alt="github" src="./github.png" height="17px"/> /spurushottam13</a></p>
         </div>
     )
 }

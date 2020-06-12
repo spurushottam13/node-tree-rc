@@ -1,33 +1,42 @@
 {
-    "title": "parent1",
+    "title": "babel@6.26.0",
     "children": [
         {
-            "title": "parent1:parentA",
+            "title": "events@1.0.1",
             "children":[
                 {
-                    "title":"parent1:parentA:parent-a"
+                    "title":"js-hint@4.0.6"
                 },
                 {
-                    "title":"parent1:parentA:parent-b"
+                    "title":"chalk@1.4.3"
                 },
                 {
-                    "title":"parent1:parentA:parent-c",
+                    "title":"body-parser@1.4.3",
+                    "children": [
+                        {"title":"eslint-config-standard@12.0.1"},
+                        {"title":"istanbul@0.4.5"},
+                        {"title":"method@1.2.1"},
+                        {"title":"mocha@4.0.1"}
+                    ]
+                },
+                {
+                    "title":"event-emitter@8.5.0",
                     "children":[
-                        {"title":"parent1:parentA:parent-a:number-1"}
+                        {"title":"fs-sync-wraaper@0.0.1"}
                     ]
                 }
             ]
         },
         {
-            "title": "parent2:parentB",
+            "title": "asap@2.01",
             "children":[
                 {
-                    "title":"parent2:parentB:parent-a"
+                    "title":"know-js@0.0.1"
                 },
                 {
-                    "title":"parent2:parentB:parent-b",
+                    "title":"esultils@2.0.2",
                     "children":[
-                        {"title":"parent2:parentB:parent-a:number-1"}
+                        {"title":"js-token@3.0.2"}
                     ]
                 }
             ]

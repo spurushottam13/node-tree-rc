@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import Node from './component/Node'
 import { useCopyNode } from './hooks/useCopyNode';
-import GithubBadge from './component/GithubBadge';
 import Header from './component/Header';
 const tree = require('./data.json')
 

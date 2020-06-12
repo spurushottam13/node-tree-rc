@@ -9,13 +9,11 @@ export default function ActionBar({
     copyNode,
     parentNodeRef,
     index,
-    nodeParentRef,
     pasteNode
 }) {
 
     const [isInputActive, setInputActive] = useState(null)
     const [inputValue, setInputValue] = useState(null)
-    const inputRef =  useRef()
     const wrapperRef = useRef()
 
     const handleCopy = (event) => {

@@ -43,6 +43,7 @@ function Node({ initalData, copyNode, pasteNode, parentNodeRef, index, deleteChi
 
     const handleOnDragOver = (e) => e.preventDefault()
 
+    // Animation
     useEffect(() => {
         nodeParentRef.current.className = "parent active"
     },[])
@@ -52,7 +53,6 @@ function Node({ initalData, copyNode, pasteNode, parentNodeRef, index, deleteChi
             <ul
                 draggable
                 ref={nodeRef}
-                className="parent-wrapper"
                 onDrop={handleOnDrop}
                 onDragEnter={handleIsTarget}
                 onDragLeave={handleIsTarget}
@@ -74,7 +74,6 @@ function Node({ initalData, copyNode, pasteNode, parentNodeRef, index, deleteChi
                         title={title}
                         children={children}
                         parentNodeRef={parentNodeRef}
-                        nodeParentRef={nodeParentRef}
                         index={index}
                     />
                 </div>
